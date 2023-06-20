@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    build: ./
+    image: reacttutsruntimeenv:latest
+    environment:
+      - REACT_APP_API_ENDPOINT=dev.hg.app
+      - REACT_APP_SOME_ENV_1=red
+      - REACT_APP_SOME_ENV_2=green
+    ports:
+      - 7080:80
